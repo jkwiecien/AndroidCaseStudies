@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.measurementwidget.MeasurementWidgetActivity
 
 class MainActivity : AppCompatActivity() {

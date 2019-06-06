@@ -3,11 +3,11 @@ package com.example.myapplication
 import android.content.Context
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.graphics.drawable.Drawable
-import android.support.graphics.drawable.Animatable2Compat
-import android.support.graphics.drawable.AnimatedVectorDrawableCompat
-import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
+import androidx.vectordrawable.graphics.drawable.Animatable2Compat
+import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 
 class GlassView : FrameLayout {
     var onStatusChanged: ((filled: Boolean) -> Unit)? = null
