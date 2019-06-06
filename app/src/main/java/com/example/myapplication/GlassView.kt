@@ -29,6 +29,7 @@ class GlassView : FrameLayout {
 
     private fun init(context: Context) {
         foreground = ContextCompat.getDrawable(context, R.drawable.empty_glass)
+        setBackgroundResource(if (filled) R.drawable.ic_glass_minus else R.drawable.ic_glass_plus)
 
         setOnClickListener {
             if (!playing) {

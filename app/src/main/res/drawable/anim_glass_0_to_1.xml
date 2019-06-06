@@ -11,12 +11,12 @@
             <path
                     android:name="path_3"
                     android:pathData="M 15.305 11.118 C 18.453 9.545 22.043 9.087 25.485 9.818 C 31.549 10.969 33.861 12.091 39.434 12.727 C 42.574 13.167 45.774 12.603 48.575 11.118 L 44.629 56.474 L 19.167 56.474 Z"
-                    android:fillColor="#5a98f2"
+                    android:fillColor="@color/fluidColor"
                     android:strokeWidth="1"/>
             <path
                     android:name="path_1"
                     android:pathData="M 38 29.4 L 26 29.4 C 24.9 29.4 24 30.3 24 31.4 C 24 32.5 24.9 33.4 26 33.4 L 38 33.4 C 39.1 33.4 40 32.5 40 31.4 C 40 30.3 39.1 29.4 38 29.4 Z"
-                    android:fillColor="#ff3344"
+                    android:fillColor="@color/plusMinusColor"
                     android:strokeWidth="1"/>
         </vector>
     </aapt:attr>
