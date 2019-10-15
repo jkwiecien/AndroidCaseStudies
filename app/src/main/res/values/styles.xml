@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TranslucentStatusTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">#33000000</item>
+    </style>
+
 </resources>

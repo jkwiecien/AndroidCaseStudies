@@ -1,0 +1,4 @@
+package com.example.myapplication.databinding.lists
+
+class ShoppingListItemCheckedChangedPayload(val item: ShoppingItemViewHolderModel)
+class ListEmptiedPayload

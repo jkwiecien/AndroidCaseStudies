@@ -1,18 +1,15 @@
 package com.example.myapplication.measurementwidget
 
 import android.content.Context
-import android.graphics.drawable.AnimatedVectorDrawable
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.FrameLayout
-import androidx.core.content.ContextCompat
 import androidx.vectordrawable.graphics.drawable.Animatable2Compat
-import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
 import com.example.myapplication.R
 import com.example.myapplication.customconstraintlayout.fadeIn
-import com.example.myapplication.customconstraintlayout.fadeOut
 import kotlinx.android.synthetic.main.view_measurement_reminder.view.*
+
 
 class MeasurementReminderView : FrameLayout {
 
@@ -41,38 +38,45 @@ class MeasurementReminderView : FrameLayout {
     }
 
     fun animateToLoggedState() {
-        val animationDrawable: AnimatedVectorDrawable =
-            ContextCompat.getDrawable(context, R.drawable.anim_logbook_register_measurement)
-                    as AnimatedVectorDrawable
+        isSelected = true
+        val fadeInAnimation = AnimationUtils.loadAnimation(context, R.anim.anim_fade_in)
+        goodJobLabelAtMeasurementReminderView.startAnimation(fadeInAnimation)
 
-        val callback = object : Animatable2Compat.AnimationCallback() {
-            override fun onAnimationStart(drawable: Drawable?) {
-                super.onAnimationStart(drawable)
-                registerLabelAtMeasurementReminderView.fadeOut(200)
-            }
-
-            override fun onAnimationEnd(drawable: Drawable) {
-                animationCallback?.let {
-                    AnimatedVectorDrawableCompat.unregisterAnimationCallback(
-                        animationDrawable,
-                        it
-                    )
-                }
-                animationCallback = null
-                isSelected = true
-//                animatedBackgroundAtMeasurementReminderView.setImageResource(R.drawable.selector_measurement_reminder_background)
-                goodJobLabelAtMeasurementReminderView.fadeIn(600)
-            }
-        }
-
-        AnimatedVectorDrawableCompat.registerAnimationCallback(animationDrawable, callback)
-        animationCallback = callback
-        animatedBackgroundAtMeasurementReminderView.setImageDrawable(animationDrawable)
-        animationDrawable.start()
+//        val animationDrawable: AnimatedVectorDrawable =
+//            ContextCompat.getDrawable(context, R.drawable.anim_logbook_register_measurement)
+//                    as AnimatedVectorDrawable
+//
+//        val callback = object : Animatable2Compat.AnimationCallback() {
+//            override fun onAnimationStart(drawable: Drawable?) {
+//                super.onAnimationStart(drawable)
+//                registerLabelAtMeasurementReminderView.fadeOut(200)
+//            }
+//
+//            override fun onAnimationEnd(drawable: Drawable) {
+//                animationCallback?.let {
+//                    AnimatedVectorDrawableCompat.unregisterAnimationCallback(
+//                        animationDrawable,
+//                        it
+//                    )
+//                }
+//                animationCallback = null
+//                isSelected = true
+////                animatedBackgroundAtMeasurementReminderView.setImageResource(R.drawable.selector_measurement_reminder_background)
+////                goodJobLabelAtMeasurementReminderView.fadeIn(600)
+//            }
+//        }
+//
+//        goodJobLabelAtMeasurementReminderView.fadeIn(800)
+//
+//        AnimatedVectorDrawableCompat.registerAnimationCallback(animationDrawable, callback)
+//        animationCallback = callback
+//        animatedBackgroundAtMeasurementReminderView.setImageDrawable(animationDrawable)
+//        animationDrawable.start()
     }
 
     fun resetToNotLoggedState() {
         isSelected = false
+        animatedBackgroundAtMeasurementReminderView.setImageResource(R.drawable.selector_measurement_reminder_background)
         registerLabelAtMeasurementReminderView.fadeIn(600)
         goodJobLabelAtMeasurementReminderView.visibility = View.INVISIBLE
     }
