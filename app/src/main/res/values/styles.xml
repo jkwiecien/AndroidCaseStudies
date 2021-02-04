@@ -12,4 +12,15 @@
         <item name="colorPrimaryDark">#33000000</item>
     </style>
 
+    <style name="FullScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TransitionsTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
 </resources>

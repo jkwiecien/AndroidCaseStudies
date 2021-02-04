@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.databinding.lists.ShoppingListActivity
+import com.example.myapplication.transitions.TransitionActivityA
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
 
 //        MeasurementWidgetActivity.start(this)
 //        startActivity(Intent(this, TranslucentStatusBarActivity::class.java))
-        ShoppingListActivity.start(this)
+//        ShoppingListActivity.start(this)
+//        FullscreenActivity.start(this)
+//        KcalTrackActivity.start(this)
+        TransitionActivityA.start(this)
     }
 }

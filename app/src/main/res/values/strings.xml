@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <item name="tag_reflow_data" type="id" />
+    <string name="transition_image" translatable="false">transitionImage</string>
+    <string name="transition_button" translatable="false">transitionButton</string>
 </resources>

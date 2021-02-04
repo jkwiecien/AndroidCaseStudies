@@ -14,7 +14,9 @@
             tools:ignore="GoogleAppIndexingWarning">
 
 
-        <activity android:name=".MainActivity">
+        <activity
+                android:name=".transitions.TransitionActivityA"
+                android:theme="@style/TransitionsTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,6 +32,20 @@
         <activity android:name=".measurementwidget.MeasurementWidgetActivity" />
         <activity android:name=".databinding.inversebindings.Custom2WayBindingActivity" />
         <activity android:name=".databinding.lists.ShoppingListActivity" />
+        <activity
+                android:name=".fullscreen.FullscreenActivity"
+                android:theme="@style/FullScreenTheme" />
+        <activity android:name=".kcaltrack.KcalTrackActivity" />
+        <!--        <activity-->
+        <!--                android:name=".transitions.TransitionActivityA"-->
+        <!--                android:theme="@style/TransitionsTheme" />-->
+        <activity
+                android:name=".transitions.TransitionActivityB"
+                android:theme="@style/TransitionsTheme" />
+
+        <activity
+                android:name=".transitions.TransitionActivityC"
+                android:theme="@style/TransitionsTheme" />
     </application>
 
 </manifest>
