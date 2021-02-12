@@ -31,7 +31,7 @@ class TransitionActivityB : AppCompatActivity() {
             TransitionActivityC.start(
                 this,
                 arrayOf(
-                    Pair(imageAtActivityB as View, getString(R.string.transition_image)),
+                    Pair(imageView as View, getString(R.string.transition_image)),
                     Pair(transitionButtonAtActivityB as View, getString(R.string.transition_button))
                 )
             )
@@ -41,7 +41,7 @@ class TransitionActivityB : AppCompatActivity() {
             TransitionActivityA.start(
                 this,
                 arrayOf(
-                    Pair(imageAtActivityB as View, getString(R.string.transition_image)),
+                    Pair(imageView as View, getString(R.string.transition_image)),
                     Pair(transitionButtonAtActivityB as View, getString(R.string.transition_button))
                 )
             )

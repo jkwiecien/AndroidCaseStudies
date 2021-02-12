@@ -14,9 +14,7 @@
             tools:ignore="GoogleAppIndexingWarning">
 
 
-        <activity
-                android:name=".transitions.TransitionActivityA"
-                android:theme="@style/TransitionsTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,6 +37,11 @@
         <!--        <activity-->
         <!--                android:name=".transitions.TransitionActivityA"-->
         <!--                android:theme="@style/TransitionsTheme" />-->
+
+        <activity
+                android:name=".transitions.TransitionActivityA"
+                android:theme="@style/TransitionsTheme" />
+
         <activity
                 android:name=".transitions.TransitionActivityB"
                 android:theme="@style/TransitionsTheme" />
@@ -46,6 +49,7 @@
         <activity
                 android:name=".transitions.TransitionActivityC"
                 android:theme="@style/TransitionsTheme" />
+        <activity android:name=".livedataevents.EventStreamActivity" />
     </application>
 
 </manifest>

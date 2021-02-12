@@ -5,7 +5,7 @@
         android:orientation="vertical">
 
     <ImageView
-            android:id="@+id/imageAtActivityA"
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:scaleType="centerCrop"
@@ -24,11 +24,11 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="24dp"
             android:gravity="bottom|center_horizontal"
             android:paddingBottom="20dp"
+            android:text="ACTIVITY A"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:text="ACTIVITY A"/>
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
 </LinearLayout>

@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.transitions.TransitionActivityA
+import com.example.myapplication.livedataevents.EventStreamActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 //        ShoppingListActivity.start(this)
 //        FullscreenActivity.start(this)
 //        KcalTrackActivity.start(this)
-        TransitionActivityA.start(this)
+//        TransitionActivityA.start(this)
+        EventStreamActivity.start(this)
     }
 }
