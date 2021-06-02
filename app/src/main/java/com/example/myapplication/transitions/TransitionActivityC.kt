@@ -4,21 +4,15 @@ import android.app.Activity
 import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
-import android.util.Pair
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
-import kotlinx.android.synthetic.main.activity_transition_c.*
 
 class TransitionActivityC : AppCompatActivity() {
 
     companion object {
-        fun start(activity: Activity, transitions: Array<Pair<View, String>>) {
+        fun start(activity: Activity) {
             val intent = Intent(activity, TransitionActivityC::class.java)
-                .addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-
-            val transitionsOptions =
-                ActivityOptions.makeSceneTransitionAnimation(activity, *transitions)
+            val transitionsOptions = ActivityOptions.makeSceneTransitionAnimation(activity)
             activity.startActivity(intent, transitionsOptions.toBundle())
         }
     }
@@ -26,15 +20,5 @@ class TransitionActivityC : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transition_c)
-
-        transitionButtonAtActivityC.setOnClickListener {
-            TransitionActivityB.start(
-                this,
-                arrayOf(
-                    Pair(imageView as View, getString(R.string.transition_image)),
-                    Pair(transitionButtonAtActivityC as View, getString(R.string.transition_button))
-                )
-            )
-        }
     }
 }

@@ -39,6 +39,20 @@
         <!--                android:theme="@style/TransitionsTheme" />-->
 
         <activity
+                android:name=".sharedelementtransition.SharedTransitionActivityA"
+                android:theme="@style/SharedElementTransitionsTheme" />
+
+        <activity
+                android:name=".sharedelementtransition.SharedTransitionActivityB"
+                android:theme="@style/SharedElementTransitionsTheme" />
+
+        <activity
+                android:name=".sharedelementtransition.SharedTransitionActivityC"
+                android:theme="@style/SharedElementTransitionsTheme" />
+        <activity android:name=".livedataevents.EventStreamActivity" />
+        <activity android:name=".numberdecimal.NumberDecimalActivity" />
+
+        <activity
                 android:name=".transitions.TransitionActivityA"
                 android:theme="@style/TransitionsTheme" />
 
@@ -49,7 +63,6 @@
         <activity
                 android:name=".transitions.TransitionActivityC"
                 android:theme="@style/TransitionsTheme" />
-        <activity android:name=".livedataevents.EventStreamActivity" />
     </application>
 
 </manifest>

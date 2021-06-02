@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.myapplication.transitions;
+package com.example.myapplication.sharedelementtransition;
 
 import android.content.Context;
 import android.content.res.TypedArray;

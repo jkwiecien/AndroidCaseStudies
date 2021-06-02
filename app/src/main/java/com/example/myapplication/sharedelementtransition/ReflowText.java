@@ -15,7 +15,7 @@
  *
  */
 
-package com.example.myapplication.transitions;
+package com.example.myapplication.sharedelementtransition;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
