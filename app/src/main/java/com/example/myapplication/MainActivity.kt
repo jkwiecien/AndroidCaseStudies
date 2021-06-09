@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.transitions.TransitionActivityA
+import com.example.myapplication.coroutines.exceptionhandler.CoroutinesExceptionHandlerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 //        SharedTransitionActivityA.start(this)
 //        EventStreamActivity.start(this)
 //        NumberDecimalActivity.start(this)
-
-        buttonAtMainActivity.postDelayed({ TransitionActivityA.start(this) }, 300)
+//        buttonAtMainActivity.postDelayed({ TransitionActivityA.start(this) }, 300)
+        CoroutinesExceptionHandlerActivity.start(this)
     }
 }
